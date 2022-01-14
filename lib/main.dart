@@ -4,9 +4,12 @@ import 'package:flutter_learn_demo/screens/Async%20Await/async_await_demo.dart';
 import 'package:flutter_learn_demo/screens/Authenticate/Auth%20Screen/auth_container.dart';
 import 'package:flutter_learn_demo/screens/Authenticate/auth_user.dart';
 import 'package:flutter_learn_demo/screens/Authenticate/auth_wrapper.dart';
+import 'package:flutter_learn_demo/screens/Data%20Fetch/data_fetch.dart';
 import 'package:flutter_learn_demo/screens/Firebase_Data/firebase_products.dart';
 import 'package:flutter_learn_demo/screens/Navigator/first_screen.dart';
+import 'package:flutter_learn_demo/screens/Real%20Estate/real_estate_wrapper.dart';
 import 'package:flutter_learn_demo/screens/Tab%20View/tab_container.dart';
+import 'package:flutter_learn_demo/screens/Tic%20Tac%20Toe/tic_tac_toe.dart';
 import 'package:flutter_learn_demo/screens/home_page.dart';
 import 'package:flutter_learn_demo/screens/Login%20UI/login_page.dart';
 import 'package:flutter_learn_demo/utils/routes.dart';
@@ -38,7 +41,10 @@ class MyApp extends StatelessWidget {
         MyRoutes.toAsyncAwaitDemo: (context) => AsyncAwaitDemo(),
         MyRoutes.toAuthWrapper: (context) => AuthWrapper(),
         MyRoutes.toNavigatorDemo: (context) => FirstScreen(),
-        MyRoutes.toFirebaseProducts: (context) => FirebaseProducts()
+        MyRoutes.toFirebaseProducts: (context) => FirebaseProducts(),
+        MyRoutes.toDataFetch: (context) => DataFetch(),
+        MyRoutes.toTicTacToe: (context) => TicTacToe(),
+        MyRoutes.toSharedPrefDemo: (context) => SharedPrefDemo(),
       },
       home: Scaffold(
         body: HomePage(),

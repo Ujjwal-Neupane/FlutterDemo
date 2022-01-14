@@ -36,7 +36,13 @@ class ProductService {
   }
 
 //add new product
-
+  addProduct(ProductModel productModel) async {
+    await firebaseFirestore
+        .collection('products')
+        .doc(productModel.pid)
+        .set(productModel.toMap());
+    //  await Future.delayed(Duration(seconds: 3));
+  }
 //remove product from the list
 
 }

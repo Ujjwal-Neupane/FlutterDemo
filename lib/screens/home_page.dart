@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learn_demo/screens/Firebase_Data/firebase_products.dart';
 import 'package:flutter_learn_demo/utils/routes.dart';
 import 'package:flutter_learn_demo/widgets/drawer.dart';
 import 'package:flutter_learn_demo/widgets/my_grid.dart';
@@ -38,6 +37,21 @@ class HomePage extends StatelessWidget {
         title: 'Firebase Data',
         myIcon: Icons.upload,
         route: MyRoutes.toFirebaseProducts),
+    MyGrid(
+        id: 6,
+        title: 'Data Fetch',
+        myIcon: Icons.download,
+        route: MyRoutes.toDataFetch),
+    MyGrid(
+        id: 7,
+        title: 'Tic Tac Toe',
+        myIcon: Icons.gamepad,
+        route: MyRoutes.toTicTacToe),
+    MyGrid(
+        id: 8,
+        title: 'Shared Pref Demo',
+        myIcon: Icons.home,
+        route: MyRoutes.toSharedPrefDemo),
   ];
 
   @override
@@ -48,13 +62,13 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
       ),
       drawer: MyDrawer(),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: GridView(
-          gridDelegate:
-              SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
-          children: List.from(gridItems),
-        ),
+      body: GridView.count(
+        mainAxisSpacing: 10,
+        crossAxisSpacing: 10,
+        crossAxisCount: 3,
+        childAspectRatio: 8 / 7,
+        padding: EdgeInsets.all(10),
+        children: List.from(gridItems),
       ),
     );
   }

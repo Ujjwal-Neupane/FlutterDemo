@@ -20,7 +20,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      //backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
@@ -28,34 +28,15 @@ class LoginPage extends StatelessWidget {
             key: _formKey,
             child: Column(
               children: [
-                Stack(
-                  children: [
-                    Align(
-                        alignment: Alignment.topLeft,
-                        child: Padding(
-                          padding: const EdgeInsets.only(right: 50, top: 10),
-                          child: IconButton(
-                              onPressed: () => gotoHome(context),
-                              iconSize: 36,
-                              color: Colors.grey[600],
-                              icon: Icon(
-                                Icons.arrow_back,
-                              )),
-                        )),
-                    Align(
-                      alignment: Alignment.center,
-                      child: Image.asset(
-                        'assets/images/login.png',
-                        height: 200,
-                      ),
-                    ),
-                  ],
+                Image.asset(
+                  'assets/images/login.png',
+                  height: 200,
                 ),
                 SizedBox(height: 20),
                 Text(
                   'Welcome',
                   style: TextStyle(
-                      fontSize: 30,
+                      fontSize: 28,
                       fontWeight: FontWeight.bold,
                       color: Colors.grey[700]),
                 ),
@@ -110,7 +91,9 @@ class LoginPage extends StatelessWidget {
                   child: Text(
                     'SIGN UP NOW',
                     style: TextStyle(
-                        fontWeight: FontWeight.bold, color: Colors.green[700]),
+                        fontWeight: FontWeight.bold,
+                        color: Colors.green[700],
+                        fontSize: 14),
                   ),
                 ),
               ],

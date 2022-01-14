@@ -8,4 +8,8 @@ class MyRoutes {
   static const String toAsyncAwaitDemo = '/asyncAwaitDemo';
   static const String toNavigatorDemo = '/navigatorDemo';
   static const String toFirebaseProducts = '/firebaseProducts';
+  static const String toDataFetch = '/dataFetch';
+  static const String toTicTacToe = '/ticTacToe';
+  static const String toRealEstate = '/realEstate';
+  static const String toSharedPrefDemo = '/sharedPrefDemo';
 }

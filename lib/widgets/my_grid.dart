@@ -16,30 +16,33 @@ class MyGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () => gotoPage(context),
-      child: Card(
-        elevation: 4.0,
-        borderOnForeground: true,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10.0),
-        ),
-        color: Colors.white,
+    return Material(
+      elevation: 4,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10.0),
+      ),
+      child: InkWell(
+        customBorder:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        onTap: () async {
+          gotoPage(context);
+          await Future.delayed(Duration(seconds: 1));
+        },
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(
               myIcon,
-              size: 50,
+              size: 40,
               color: Colors.green[700],
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 5),
             Text(title,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.green[700],
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
+                  fontSize: 13,
+                  fontWeight: FontWeight.w500,
                 )),
           ],
         ),
