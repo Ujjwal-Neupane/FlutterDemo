@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:flutter_learn_demo/utils/urls.dart';
+import 'package:flutter_learn_demo/utils/my_urls.dart';
 import 'package:http/http.dart' as http;
 
 import '../models/user_detail.dart';
@@ -7,7 +7,6 @@ import '../models/user_detail.dart';
 class UserServices {
   Future<dynamic> fetchUser() async {
     final response = await http.get(Uri.parse(MyUrls.userJson));
-
     if (response.statusCode == 200) {
       // If the server did return a 200 OK response,
       // then parse the JSON.

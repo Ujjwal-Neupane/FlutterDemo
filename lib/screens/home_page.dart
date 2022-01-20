@@ -50,8 +50,10 @@ class HomePage extends StatelessWidget {
     MyGrid(
         id: 8,
         title: 'Shared Pref Demo',
-        myIcon: Icons.home,
+        myIcon: Icons.save,
         route: MyRoutes.toSharedPrefDemo),
+    MyGrid(
+        id: 9, title: 'Flat', myIcon: Icons.house, route: MyRoutes.toFetchFlat),
   ];
 
   @override

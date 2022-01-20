@@ -37,13 +37,16 @@ class MyGrid extends StatelessWidget {
               color: Colors.green[700],
             ),
             SizedBox(height: 5),
-            Text(title,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.green[700],
-                  fontSize: 13,
-                  fontWeight: FontWeight.w500,
-                )),
+            Padding(
+              padding: const EdgeInsets.only(left: 4, right: 4),
+              child: Text(title,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.green[700],
+                    fontSize: 13,
+                    fontWeight: FontWeight.w500,
+                  )),
+            ),
           ],
         ),
       ),
