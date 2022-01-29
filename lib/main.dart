@@ -7,8 +7,9 @@ import 'package:flutter_learn_demo/screens/Authenticate/auth_wrapper.dart';
 import 'package:flutter_learn_demo/screens/Data%20Fetch/data_fetch.dart';
 import 'package:flutter_learn_demo/screens/Firebase_Data/firebase_products.dart';
 import 'package:flutter_learn_demo/screens/Navigator/first_screen.dart';
-import 'package:flutter_learn_demo/screens/Real%20Estate/real_estate_wrapper.dart';
+import 'package:flutter_learn_demo/screens/Push%20Notification/push_notification.dart';
 import 'package:flutter_learn_demo/screens/Rent%20Flat/fetch_flat.dart';
+import 'package:flutter_learn_demo/screens/Shared%20Pref/shared_pref.dart';
 import 'package:flutter_learn_demo/screens/Tab%20View/tab_container.dart';
 import 'package:flutter_learn_demo/screens/Tic%20Tac%20Toe/tic_tac_toe.dart';
 import 'package:flutter_learn_demo/screens/home_page.dart';
@@ -18,7 +19,6 @@ import 'package:flutter_learn_demo/utils/routes.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-
   runApp(const MyApp());
 }
 
@@ -47,6 +47,7 @@ class MyApp extends StatelessWidget {
         MyRoutes.toTicTacToe: (context) => TicTacToe(),
         MyRoutes.toSharedPrefDemo: (context) => SharedPrefDemo(),
         MyRoutes.toFetchFlat: (context) => FetchFlat(),
+        MyRoutes.toPushNotification: (context) => PushNotiDemo(),
       },
       home: Scaffold(
         body: HomePage(),

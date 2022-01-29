@@ -54,6 +54,11 @@ class HomePage extends StatelessWidget {
         route: MyRoutes.toSharedPrefDemo),
     MyGrid(
         id: 9, title: 'Flat', myIcon: Icons.house, route: MyRoutes.toFetchFlat),
+    MyGrid(
+        id: 10,
+        title: 'Push Notification',
+        myIcon: Icons.notifications,
+        route: MyRoutes.toPushNotification),
   ];
 
   @override

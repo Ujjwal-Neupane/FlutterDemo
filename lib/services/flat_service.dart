@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'dart:developer';
-import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:flutter/services.dart';
@@ -14,10 +13,15 @@ class FlatService {
 
     if (response.statusCode == 200) {
       var flatData = jsonDecode(response.body);
-      print(response.body);
-      return List.from(flatData)
-          .map<Flat>((item) => Flat.fromMap(item))
-          .toList();
+      log(flatData.toString());
+      List<Flat> flatList =
+          List.from(flatData).map<Flat>((item) => Flat.fromMap(item)).toList();
+      List imageList = [];
+
+      Map<String, dynamic> flatMap = {
+        'flatList': flatList,
+      };
+      return flatMap;
     } else {
       print('error...');
       return null;

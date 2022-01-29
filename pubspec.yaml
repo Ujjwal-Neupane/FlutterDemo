@@ -40,6 +40,9 @@ dependencies:
   flutter_screenutil: ^5.0.1
   http: ^0.13.4
   shared_preferences: ^2.0.12
+  flutter_local_notifications: ^9.2.0
+
+
 
 dev_dependencies:
   flutter_test:

@@ -49,7 +49,7 @@ class _SharedPrefDemoState extends State<SharedPrefDemo> {
             ),
             SizedBox(height: 20),
             FloatingActionButton(
-                onPressed: () => increaseCount(), child: Icon(Icons.add)),
+                onPressed: increaseCount, child: Icon(Icons.add)),
             SizedBox(height: 20),
             ElevatedButton(
                 onPressed: () => clearPrefs(), child: Text('Clear Shared Pref'))

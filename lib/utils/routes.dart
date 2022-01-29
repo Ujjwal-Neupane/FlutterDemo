@@ -12,4 +12,5 @@ class MyRoutes {
   static const String toTicTacToe = '/ticTacToe';
   static const String toSharedPrefDemo = '/sharedPrefDemo';
   static const String toFetchFlat = '/fetchFlat';
+  static const String toPushNotification = '/pushNotification';
 }

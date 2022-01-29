@@ -1,7 +1,10 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_learn_demo/models/flat_model.dart';
 import 'package:flutter_learn_demo/services/flat_service.dart';
+import 'package:flutter_learn_demo/utils/my_urls.dart';
 
 class FetchFlat extends StatefulWidget {
   const FetchFlat({Key? key}) : super(key: key);
@@ -111,7 +114,10 @@ class _FetchFlatState extends State<FetchFlat> {
     return Card(
       child: Row(
         children: [
-          Icon(Icons.house, size: 100),
+          Image.network(
+            'https://png.pngtree.com/png-clipart/20190629/original/pngtree-vector-flat-icon-png-image_4091872.jpg',
+            scale: 10,
+          ),
           Column(
             children: [
               Text(flat.description),
@@ -125,7 +131,10 @@ class _FetchFlatState extends State<FetchFlat> {
   }
 
   Future<void> getFlatList() async {
-    flatList = await FlatService().fetchFlatList();
+    Map<String, dynamic> flatMap = await FlatService().fetchFlatList();
+    log(flatMap.toString());
+    flatList = flatMap['flatList'];
+
     setState(() {});
   }
 
